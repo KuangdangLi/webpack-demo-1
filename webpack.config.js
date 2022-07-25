@@ -10,5 +10,13 @@ module.exports = {
     plugins:[new HtmlWebpackPlugin({
         title: '效率加快',
         template: 'src/assets/index.html'
-    })]
+    })],
+    module: {
+        rules:[
+            {
+                test: /\.css$/i,
+                use: ['style-loader','css-loader'],
+            },
+        ],
+    },
 };
